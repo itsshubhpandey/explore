@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore India - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #007bff;
+            --orange: #fd7e14;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --font-family-sans-serif: 'Poppins', sans-serif;
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        body {
+            background-image: url(bg_3.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-family: var(--font-family-sans-serif);
+        }
+
+        /* Adding a background overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .login-box {
+            width: 50vh;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent box */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            z-index: 2; 
+            /* text-align: center; */
+        }
+
+        .logo-of-explore-india {
+            font-size: 80px;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .logo-of-explore-india span {
+            position: relative;
+            /* right: 90px; */
+            font-size: 40px;
+            font-weight: 600;
+            color: #f15d30;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 15px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input {
+            background-color: #eaeff4;
+            height: 45px;
+            width: px;
+            padding: 10px;
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+            width: 400px;
+        }
+
+        input:focus {
+            border-color: var(--orange);
+        }
+
+        button {
+            
+            position: relative;
+            top: 20px;
+            left: 10px;
+
+            
+
+            background: linear-gradient(45deg, #fd7e14, #ff9e45);
+            color: var(--white);
+            font-weight: bold;
+            height: 50px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            width: 150px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+        }
+
+        .register-link {
+            margin-top: 20px;
+            font-size: 16px;
+            color: var(--gray-dark);
+        }
+
+        .register-link a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .logo-of-explore-india {
+                font-size: 50px;
+            }
+
+            .logo-of-explore-india span {
+                font-size: 30px;
+            }
+
+            .login-box {
+                padding: 20px;
+                width: 90%;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <div>
+            <a class="logo-of-explore-india">Explore<span>India</span></a>
+        </div>
+        <div class="main">
+            <form action="/submit" method="post">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <!-- <button type="submit">Login</button> -->
+            </form>
+
+            <!-- <button type="submit">Login</button> -->
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+        <div class="register-link">
+            Not registered? <a href="Signup.html">Sign up here</a>
+        </div>
+    </div>
+</body>
+
+</html>
